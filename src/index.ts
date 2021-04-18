@@ -1,9 +1,12 @@
-const redirectMap = new Map([
-    ["/r/something", "https://github.com/itspngu/cloudflare-redirect-worker"],
-    ["/r/copr", "https://copr.fedorainfracloud.org/coprs/itspngu/"],
-]);
+// @ts-expect-error
+import { redirects } from "../redirects.yml";
+
+const redirectMap: Map<string, string> = new Map(Object.entries(redirects));
 
 async function handleRequest(req: Request): Promise<Response> {
+    console.log(redirects);
+    console.log(redirectMap);
+
     const path = new URL(req.url).pathname;
     const location = redirectMap.get(path);
 

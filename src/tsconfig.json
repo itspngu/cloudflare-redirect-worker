@@ -9,14 +9,14 @@
         "alwaysStrict": true,
         "strict": true,
         "preserveConstEnums": true,
-        "resolveJsonModule": true,
-        "allowJs": true,
+        "resolveJsonModule": false,
+        "allowJs": false,
         "sourceMap": false,
         "declaration": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "typeRoots": ["node_modules/@types", "node_modules"],
-        "types": ["@cloudflare/workers-types"]
+        "types": ["@cloudflare/workers-types", "yaml/types"]
     },
     "exclude": ["**/node_modules", "**/worker", "**/dist"]
 }

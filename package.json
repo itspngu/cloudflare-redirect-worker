@@ -13,7 +13,7 @@
     "scripts": {
         "build": "webpack --config src/webpack.config.ts",
         "deploy": "wrangler publish",
-        "format": "prettier --write '**/*.{ts,js,json}'",
+        "format": "prettier --write '**/*.{ts,json}'",
         "tail": "wrangler tail"
     },
     "devDependencies": {
@@ -26,6 +26,7 @@
         "ts-node": "^9.1.1",
         "typescript": "^3.9.5",
         "webpack": "^4.43.0",
-        "webpack-cli": "^3.3.12"
+        "webpack-cli": "^3.3.12",
+        "yaml-loader": "^0.6.0"
     }
 }

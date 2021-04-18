@@ -17,7 +17,7 @@ const config: Configuration = {
         path: path.resolve("worker"),
     },
     resolve: {
-        extensions: [".ts", ".js"],
+        extensions: [".ts", ".yml"],
     },
     module: {
         rules: [
@@ -27,6 +27,11 @@ const config: Configuration = {
                 options: {
                     transpileOnly: true,
                 },
+            },
+            {
+                test: /\.ya?ml$/,
+                type: "json", // https://www.npmjs.com/package/yaml-loader#usage
+                use: "yaml-loader",
             },
         ],
     },
