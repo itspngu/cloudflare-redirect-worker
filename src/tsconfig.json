@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "rootDir": "..",
+        "baseUrl": "src",
+        "outDir": "worker",
+        "module": "commonjs",
+        "target": "esnext",
+        "lib": ["webworker", "esnext"],
+        "alwaysStrict": true,
+        "strict": true,
+        "preserveConstEnums": true,
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "sourceMap": false,
+        "declaration": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "typeRoots": ["node_modules/@types", "node_modules"],
+        "types": ["@cloudflare/workers-types"]
+    },
+    "exclude": ["**/node_modules", "**/worker", "**/dist"]
+}

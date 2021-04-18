@@ -1,0 +1,11 @@
+name = "cloudflare-redirect-worker"
+type = "webpack"
+
+# Disable workers.dev, serve from custom domain + path.
+workers_dev = false
+route = "pngu.io/r/*"
+
+# Make sure wrangler doesn't get in the way - it's all kinds of awful.
+[build]
+upload.format = "service-worker"
+command = "echo 'wrangler bad' && exit 0"
