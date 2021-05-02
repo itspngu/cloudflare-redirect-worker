@@ -1,12 +1,12 @@
 // @ts-expect-error
 import { redirects, prefix } from "../redirects.yml";
 
-const redirectPrefix: string = prefix || "/r/";
+const redirectPrefix: string = prefix || "/r";
 const redirectsTyped = redirects as Record<string, string>;
 
 const redirectsPrefixed: [string, string][] = Object.entries(
     redirectsTyped,
-).map(([route, redirect]) => [`${redirectPrefix}${route}`, redirect]);
+).map(([route, redirect]) => [`${redirectPrefix}/${route}`, redirect]);
 
 const redirectMap: Map<string, string> = new Map(redirectsPrefixed);
 
