@@ -1,7 +1,12 @@
 // @ts-expect-error
-import { redirects } from "../redirects.yml";
+import {redirects} from "../redirects.yml";
 
-const redirectMap: Map<string, string> = new Map(Object.entries(redirects));
+const redirectsTyped = redirects as Record<string,string>;
+const redirectsPrefixed: [string, string][] = Object.entries(redirectsTyped).map(
+    ([route, redirect]) => [`/r/${route}`, redirect]
+);
+
+const redirectMap: Map <string, string> = new Map(redirectsPrefixed);
 
 async function handleRequest(req: Request): Promise<Response> {
     console.log(redirects);
