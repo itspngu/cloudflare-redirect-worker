@@ -1,4 +1,4 @@
 redirects:
   something: https://github.com/itspngu/cloudflare-redirect-worker
   copr: https://copr.fedorainfracloud.org/coprs/itspngu/
-  dotfiles: https://raw.githubusercontent.com/itspngu/.dotfiles/master/.config/bootstrap.sh
+  dotfiles-bootstrap: https://raw.githubusercontent.com/itspngu/.dotfiles/master/.config/yadm/pre-bootstrap
