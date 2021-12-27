@@ -2,3 +2,4 @@ redirects:
   something: https://github.com/itspngu/cloudflare-redirect-worker
   copr: https://copr.fedorainfracloud.org/coprs/itspngu/
   dotfiles-bootstrap: https://raw.githubusercontent.com/itspngu/.dotfiles/master/.config/yadm/pre-bootstrap
+  free-nitro: https://www.youtube.com/watch?v=cvh0nX08nRw
